@@ -69,6 +69,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Views\Main.cshtml" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

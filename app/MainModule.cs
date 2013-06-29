@@ -4,7 +4,7 @@
 	{
 		public MainModule()
 		{
-			Get["/"] = _ => "Hello World!";
+			Get["/"] = _ => View["Main.cshtml", new { Message = "Hello World!" }];
 		}
 	}
 }
