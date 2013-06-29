@@ -2,9 +2,23 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>C# REPL</title>
+    <script src="../content/lib/codemirror.js"></script>
+    <link rel="stylesheet" href="../content/lib/codemirror.css" />
+    <script src="../content/mode/clike/clike.js"></script>
 </head>
     <body>
-        <h1>@Model.Message</h1>
+        <p>Write your C# here</p>
+        <textarea id="editor">
+var name = "World";
+Console.WriteLine("Hello " + name);
+        </textarea>
+            <script>
+                var editor = CodeMirror.fromTextArea(document.getElementById("editor"), {
+                    lineNumbers: true,
+                    matchBrackets: true,
+                    mode: "text/x-csharp"
+                });
+    </script>
     </body>
 
 </html>
